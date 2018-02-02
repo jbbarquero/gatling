@@ -83,7 +83,7 @@
 						</goals>
 						<configuration>
 							<args>
-								<arg>-Ybackend:GenBCode</arg>
+								<!-- <arg>-Ybackend:GenBCode</arg> -->
 								<arg>-Ydelambdafy:method</arg>
 								<arg>-target:jvm-1.8</arg>
 								<arg>-deprecation</arg>
