@@ -84,7 +84,7 @@
 				<artifactId>gatling-maven-plugin</artifactId>
 				<version>${gatling-maven-plugin.version}</version>
 				<configuration>
-					<simulationClass>Foo</simulationClass>
+					<simulationClass>com.malsolo.gatling.example.SimpleSimulation</simulationClass>
 				</configuration>
 				<executions>
 					<execution>
