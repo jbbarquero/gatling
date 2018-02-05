@@ -8,6 +8,7 @@
 	<packaging>pom</packaging>
 	<modules>
 		<module>gatling-test</module>
+		<module>gatling-poc</module>
 	</modules>
 
 </project>
