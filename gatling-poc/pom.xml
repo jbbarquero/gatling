@@ -83,14 +83,15 @@
 				<groupId>io.gatling</groupId>
 				<artifactId>gatling-maven-plugin</artifactId>
 				<version>${gatling-maven-plugin.version}</version>
-				<configuration>
-					<simulationClass>com.malsolo.gatling.example.SimpleSimulation</simulationClass>
-				</configuration>
 				<executions>
 					<execution>
+						<id>execution1</id>
 						<goals>
 							<goal>integration-test</goal>
 						</goals>
+						<configuration>
+							<simulationClass>com.malsolo.gatling.example.SimpleSimulation</simulationClass>
+						</configuration>
 					</execution>
 				</executions>
 			</plugin>
