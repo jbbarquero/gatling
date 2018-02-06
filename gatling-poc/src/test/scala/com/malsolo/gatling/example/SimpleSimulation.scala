@@ -44,7 +44,7 @@ class SimpleSimulation extends Simulation {
     exec(Health.health, Create.create, Read.read)
 
   setUp(
-    scn.inject(rampUsers(10) over (10 seconds))
+    scn.inject(rampUsers(1000) over (30 seconds))
   ).protocols(httpConfig)
     .assertions(
       global.successfulRequests.percent.gt(95),
