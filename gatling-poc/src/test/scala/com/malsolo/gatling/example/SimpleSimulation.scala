@@ -46,4 +46,11 @@ class SimpleSimulation extends Simulation {
   setUp(
     scn.inject(rampUsers(10) over (10 seconds))
   ).protocols(httpConfig)
+    .assertions(
+      global.successfulRequests.percent.gt(95),
+      global.responseTime.max.lt(80),
+      global.responseTime.mean.lt(30),
+      global.responseTime.percentile1.lt(20)
+    )
+
 }
