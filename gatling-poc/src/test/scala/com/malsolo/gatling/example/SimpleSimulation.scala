@@ -4,6 +4,8 @@ import io.gatling.core.scenario.Simulation
 import io.gatling.core.Predef._
 import io.gatling.http.Predef._
 
+import scala.concurrent.duration._
+
 class SimpleSimulation extends Simulation {
 
   object Health {
@@ -41,5 +43,7 @@ class SimpleSimulation extends Simulation {
   private val scn = scenario("Status scenario").
     exec(Health.health, Create.create, Read.read)
 
-  setUp(scn.inject(atOnceUsers(1))).protocols(httpConfig)
+  setUp(
+    scn.inject(rampUsers(10) over (10 seconds))
+  ).protocols(httpConfig)
 }
