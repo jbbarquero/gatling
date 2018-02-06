@@ -83,6 +83,9 @@
 				<groupId>io.gatling</groupId>
 				<artifactId>gatling-maven-plugin</artifactId>
 				<version>${gatling-maven-plugin.version}</version>
+				<configuration>
+					<disableCompiler>true</disableCompiler>
+				</configuration>
 				<executions>
 					<execution>
 						<id>execution1</id>
