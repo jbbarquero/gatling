@@ -48,7 +48,7 @@ class SimpleSimulation extends Simulation {
   ).protocols(httpConfig)
     .assertions(
       global.successfulRequests.percent.gt(95),
-      global.responseTime.max.lt(80),
+      global.responseTime.max.lt(200),
       global.responseTime.mean.lt(30),
       global.responseTime.percentile1.lt(20)
     )
